@@ -13,7 +13,7 @@ SCOPES = ['https://www.googleapis.com/auth/drive']
 
 service = Create_Service(CLIENT_SECRET_FILE,API_NAME,API_VERSION,SCOPES)
 
-
+a = 'stop'
 
 app = Flask(__name__)
 db = mysql.connector.connect(host="127.0.0.1", user="root", password="Cj10856672", database="Bomberdb")
@@ -72,7 +72,6 @@ def submit():
 @app.route('/')
 def index():
     return render_template('form.html')
-
 
 @app.route('/submitted')
 def submitted():
