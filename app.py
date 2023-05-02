@@ -13,7 +13,7 @@ SCOPES = ['https://www.googleapis.com/auth/drive']
 
 service = Create_Service(CLIENT_SECRET_FILE,API_NAME,API_VERSION,SCOPES)
 
-a = 'stop'
+
 
 app = Flask(__name__)
 db = mysql.connector.connect(host="127.0.0.1", user="root", password="Cj10856672", database="Bomberdb")
@@ -31,7 +31,7 @@ def submit():
         print("body:", body)
         # Create temporary directory
         with tempfile.TemporaryDirectory() as temp_dir:
-            print(f"Created temporary directory: {temp_dir}")
+            #print(f"Created temporary directory: {temp_dir}")
             folder_path = os.path.join(temp_dir, folder_file.filename)
             folder_file.save(folder_path)
             print("folder:", folder_path)
