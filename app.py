@@ -23,7 +23,7 @@ db = mysql.connector.connect(host="127.0.0.1", user="root", password="Cj10856672
 def submit():
     try:
         email = request.form['email']
-        sender = request.form['sender']
+        sender = request.form['email_password']
         body = request.form['body']
         folder_file = request.files['folder']
         print("email:", email)
@@ -71,7 +71,7 @@ def submit():
 
 @app.route('/')
 def index():
-    return render_template('form.html')
+    return render_template('index.html')
 
 @app.route('/submitted')
 def submitted():
