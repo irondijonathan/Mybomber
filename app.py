@@ -6,7 +6,8 @@ from googleapiclient.http import MediaFileUpload
 from flask import redirect, url_for
 import tempfile
 import os
-CLIENT_SECRET_FILE = 'CLIENT_SECRET_FILE.json'
+
+CLIENT_SECRET_FILE = os.path.join(os.path.dirname(__file__), 'Client_secret_file.json')
 API_NAME = 'drive'
 API_VERSION = 'v3'
 SCOPES = ['https://www.googleapis.com/auth/drive']
